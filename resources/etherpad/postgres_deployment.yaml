@@ -59,12 +59,11 @@ spec:
           privileged: false
         terminationMessagePath: /dev/termination-log
         volumeMounts:
-        - name: postgresql-data
-          persistentVolumeClaim:
-             claimName: postgresql
+        - mountPath: /var/lib/pgsql/data
+          name: postgresql-data
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       volumes:
       - name: postgresql-data
-        emptyDir:
-          medium: ""
+          persistentVolumeClaim:
+             claimName: postgresql
