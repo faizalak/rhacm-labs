@@ -59,8 +59,7 @@ spec:
           privileged: false
         terminationMessagePath: /dev/termination-log
         volumeMounts:
-        - mountPath: /var/lib/pgsql/data
-          name: postgresql-data
+        - name: postgresql-data
           persistentVolumeClaim:
              claimName: postgresql
       dnsPolicy: ClusterFirst
