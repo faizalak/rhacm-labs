@@ -43,5 +43,5 @@ spec:
   placement:
     placementRef:
       kind: PlacementRule
-      name: dev-clusters
+      name: etherpad-clusters
 

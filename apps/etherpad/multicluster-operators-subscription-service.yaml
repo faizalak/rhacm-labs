@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: multicluster-operators-subscription
+  namespace: acm
+spec:
+  ports:
+    - protocol: TCP
+      port: 443
+      targetPort: 8443
+  selector:
+    app: multicluster-operators-hub-subscription
+  type: ClusterIP
+  sessionAffinity: None
