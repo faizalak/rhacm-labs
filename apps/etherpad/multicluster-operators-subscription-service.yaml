@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: multicluster-operators-subscription
-  namespace: acm
+  namespace: open-cluster-management
 spec:
   ports:
     - protocol: TCP
