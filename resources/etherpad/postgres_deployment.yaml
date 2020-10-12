@@ -35,7 +35,6 @@ spec:
               key: database-name
               name: ether
         image: registry.redhat.io/rhscl/postgresql-10-rhel7@sha256:5c4f5f52a37718a9a1997ba212ef172694475558c35232b56dac638529c5b569
-        command: ["sh", "-c", "chown -R 777:777 /var/lib/pgsql"]
         imagePullPolicy: IfNotPresent
         livenessProbe:
           exec:
@@ -62,7 +61,7 @@ spec:
           privileged: false
         terminationMessagePath: /dev/termination-log
         volumeMounts:
-        - mountPath: /var/lib/pgsql/data
+        - mountPath: /tmp/pgsql/data
           name: postgresql-data
       dnsPolicy: ClusterFirst
       restartPolicy: Always
