@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgresql
-  software: my-etherpad-db
+  software: my-etherpad-db-1
 spec:
   replicas: 1
   selector:
