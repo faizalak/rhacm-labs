@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/name: pacman
 spec:
   tower_auth_secret: ansible-tower
-  job_template_name: f5-update
+  job_template_name: create-vs
   extra_vars:
     API_DOMAIN: demo.red-chesterfield.com
 
